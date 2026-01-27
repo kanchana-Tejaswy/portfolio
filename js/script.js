@@ -1,14 +1,17 @@
 /*============typing animation========*/
-var typed = new Typed(".typing",{
-    strings:["Web Designer","Web Developer" ," uipath certified developer "," devops developer"],
-    typeSpeed:50,
-    BackSpeed:25,
-    loop:true
-})
-
+var typed = new Typed(".typing", {
+    strings: [
+        "Web Designer",
+        "Web Developer",
+        "UiPath Certified Developer",
+        "DevOps Developer"
+    ],
+    typeSpeed: 50,
+    backSpeed: 25,
+    loop: true
+});
 /*============Aside========*/
 const nav = document.querySelector(".nav"),
-      navist = nav.querySelectorAll("li"),
       navList = nav.querySelectorAll("li"),
       totalNavlist = navList.length,
       allSection = document.querySelectorAll(".section"),
@@ -24,15 +27,15 @@ const nav = document.querySelector(".nav"),
             {
                  if(navList[j].querySelector("a").classList.contains("active"))
                 {
-                  addBackSection();
+                  addBackSection(j);
                    // allSection[j].classList.add("back-section");
                 }
                 navList[j].querySelector("a").classList.remove("active");
 
             }   
             this.classList.add("active")
-            showSectiion(this);
-            if(window.innerWind < 1200)
+            showSection(this);
+            if(window.innerWindh < 1200)
             {
                 asideSectionToggleBtn();
 
@@ -46,10 +49,11 @@ const nav = document.querySelector(".nav"),
           allSection[i].classList.remove("back-section");
         }
       } 
-      function addBackSection(num)
-      {
-       allSection[num].classList.add("back-section");
-      }
+      function addBackSection(num) {
+  if (num !== undefined) {
+    allSection[num].classList.add("back-section");
+  }
+}
       function showSection(element)
       {
           for (let i = 0; i < totalSection; i++)
@@ -75,13 +79,13 @@ const nav = document.querySelector(".nav"),
       }
       document.querySelector(".hire-me").addEventListener("click", function()
       {
-        const sectionIndex = this.getAttribute("data-section-index");
+        const sectionIndex = parseInt(this.getAttribute("data-section-index"));
         showSection(this);
         updateNav(this);
         removeBackSection();
         addBackSection(sectionIndex);
       })
-      const navTogglerBtn = document.querySelector(".nav-toggler"),
+const navTogglerBtn = document.querySelector(".toggler");
             aside = document.querySelector(".aside");
             navTogglerBtn.addEventListener("click", ()=>
             {
