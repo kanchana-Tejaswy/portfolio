@@ -1,12 +1,11 @@
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
+.style-switcher-toggler i {
+    animation: spin 2s linear infinite;
+}
 .style-switcher {
     position: fixed;
     right: 0;

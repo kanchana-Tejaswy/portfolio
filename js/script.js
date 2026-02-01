@@ -4,7 +4,7 @@ var typed = new Typed(".typing", {
         "Web Designer",
         "Web Developer",
         "UiPath Certified Developer",
-        "DevOps Developer"
+        "Content Creator"
     ],
     typeSpeed: 50,
     backSpeed: 25,
