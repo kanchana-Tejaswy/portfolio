@@ -1,24 +1,36 @@
-// Back button
+// ================================
+// Back Button Function
+// ================================
 function goBack() {
     window.history.back();
 }
 
-// Fade-in animation
-const faders = document.querySelectorAll('.fade-in');
+// ================================
+// Fade-in Scroll Animation
+// ================================
+document.addEventListener("DOMContentLoaded", function () {
 
-const appearOptions = {
-    threshold: 0.2
-};
+    const faders = document.querySelectorAll('.fade-in');
 
-const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
+    if (faders.length === 0) return; // Safety check
 
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target);
+    const appearOptions = {
+        threshold: 0.2
+    };
+
+    const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(entry => {
+
+            if (!entry.isIntersecting) return;
+
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
     });
-}, appearOptions);
 
-faders.forEach(fader => {
-    appearOnScroll.observe(fader);
 });
