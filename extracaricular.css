@@ -122,6 +122,10 @@ footer {
     .activity-card img {
         height: 180px;
     }
+
+    .activities {
+        padding: 40px 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -136,5 +140,17 @@ footer {
 
     .navbar {
         padding: 12px 15px;
+    }
+
+    .activities {
+        padding: 20px 10px;
+    }
+
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .activity-card img {
+        height: 150px;
     }
 }

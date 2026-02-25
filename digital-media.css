@@ -143,4 +143,16 @@ footer {
     .navbar {
         padding: 12px 15px;
     }
+
+    .media-section {
+        padding: 30px 10px;
+    }
+
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .media-card img {
+        height: 150px;
+    }
 }

@@ -908,4 +908,14 @@ h3.my-profession
         max-width: 100%;
 
     }
+
+    .section {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 0 10px;
+    }
 }

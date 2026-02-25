@@ -209,6 +209,10 @@ footer {
     .cert-image img {
         max-width: 100%;
     }
+
+    .section {
+        padding: 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -236,5 +240,22 @@ footer {
 
     .navbar {
         padding: 12px 15px;
+    }
+
+    .section {
+        padding: 10px;
+    }
+
+    .cert-box {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
     }
 }
