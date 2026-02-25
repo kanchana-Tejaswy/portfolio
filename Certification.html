@@ -13,60 +13,84 @@
 </head>
 <body>
 
-    <!-- ========== NAVBAR ========== -->
+    <!-- ================= NAVBAR ================= -->
     <nav class="navbar">
         <div class="nav-container">
             <h2 class="logo">My Certifications</h2>
-            <button class="back-btn" onclick="goBack()">← Back to Portfolio</button>
+            <button class="back-btn" onclick="window.location.href='index.html'">
+                ← Back to Portfolio
+            </button>
         </div>
     </nav>
 
-    <!-- ========== HERO SECTION ========== -->
-    <section class="hero fade-in">
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero">
         <h1>Professional Certifications</h1>
         <p>Recognitions & Credentials in Automation and Technology</p>
     </section>
 
-    <!-- ========== CERTIFICATIONS SECTION ========== -->
+    <!-- ================= CERTIFICATIONS SECTION ================= -->
     <section class="certifications">
 
-        <!-- Certification Card 1 -->
-        <div class="cert-card fade-in">
-            <img src="image/images/cert1.jpeg" alt="UiPath Certification">
+        <!-- ===== Certification 1 ===== -->
+        <div class="cert-box">
+
+            <!-- LEFT IMAGE -->
+            <div class="cert-image">
+                <img src="upadc.jpg" alt="UiPath Associate Developer Certification">
+            </div>
+
+            <!-- RIGHT CONTENT -->
             <div class="cert-content">
-                <h3>UiPath Certified RPA Developer</h3>
-                <p>Issued by UiPath | 2026</p>
+                <h3>UiPath Associate Developer</h3>
+                <p class="issuer">Issued by UiPath | 2025</p>
+
                 <p>
                     Certified in building scalable automation workflows using
                     UiPath Studio, Orchestrator, and REFramework.
                 </p>
-                <a href="#" class="btn">View Certificate</a>
+
+                <a href="https://drive.google.com/file/d/1kaujFEDmpRTj94_2lP8Ig2CZhnVHaseV/view?usp=sharing"
+                   class="btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   View Certification
+                </a>
             </div>
+
         </div>
 
-        <!-- Certification Card 2 -->
-        <div class="cert-card fade-in">
-            <img src="image/images/cert2.jpeg" alt="Java Certification">
-            <div class="cert-content">
-                <h3>Java Full Stack Development</h3>
-                <p>Issued by EduSkills | 2026</p>
-                <p>
-                    Completed hands-on training in backend development,
-                    REST APIs, and database integration.
-                </p>
-                <a href="#" class="btn">View Certificate</a>
+        <!-- ===== Certification 2 ===== -->
+        <div class="cert-box">
+
+            <div class="cert-image">
+                <img src="image/images/cert2.jpeg" alt="Basic Python Programming">
             </div>
+
+            <div class="cert-content">
+                <h3>Basic Python Programming</h3>
+                <p class="issuer">Issued by Geeks for Geeks  | 2025</p>
+
+                <p>
+                    Completed hands-on training in basic Python
+                </p>
+
+                <a href="#"
+                   class="btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   View Certificate
+                </a>
+            </div>
+
         </div>
 
     </section>
 
-    <!-- ========== FOOTER ========== -->
+    <!-- ================= FOOTER ================= -->
     <footer>
         <p>© 2026 Tejaswy | Built with Discipline</p>
     </footer>
 
-    <script src="certification.js"></script>
-     <script src="js/script.js"></script>
-    <script src="js/style-switcher.js"></script>
 </body>
 </html>

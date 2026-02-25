@@ -1,135 +1,240 @@
-/* ===== GENERAL STYLES ===== */
-body {
+/* ===============================
+   GLOBAL STYLES
+================================= */
+
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Inter', sans-serif;
-    background-color: #f5f5f5;
+    background-color: #f3f4f6;
     color: #1f2937;
+    line-height: 1.6;
 }
 
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
 }
 
-section {
-    padding: 60px 20px;
-}
 
-/* ===== NAVBAR ===== */
+/* ===============================
+   NAVBAR
+================================= */
+
 .navbar {
     background-color: #1f2937;
     color: white;
+    padding: 18px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 .nav-container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .back-btn {
     background: white;
     color: #1f2937;
     border: none;
-    padding: 8px 15px;
-    border-radius: 8px;
+    padding: 8px 16px;
+    border-radius: 6px;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
 .back-btn:hover {
-    background: #e5e7eb;
+    background-color: #e5e7eb;
 }
 
-/* ===== HERO SECTION ===== */
+
+/* ===============================
+   HERO SECTION
+================================= */
+
 .hero {
     text-align: center;
-    background: #1f2937;
-    color: white;
     padding: 60px 20px;
+    background-color: #e5e7eb;
 }
 
-/* ===== CERTIFICATIONS GRID ===== */
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #6b7280;
+}
+
+
+/* ===============================
+   CERTIFICATION SECTION
+================================= */
+
 .certifications {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
 }
 
-.cert-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
+
+/* ===============================
+   CERTIFICATION BOX
+================================= */
+
+.cert-box {
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px;
+    border-radius: 14px;
+    margin-bottom: 40px;
+    transition: all 0.4s ease;
 }
 
-.cert-card:hover {
-    transform: translateY(-8px);
+/* Hover Shadow Effect */
+.cert-box:hover {
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+    transform: translateY(-6px);
 }
 
-.cert-card img {
+
+/* ===============================
+   IMAGE SECTION
+================================= */
+
+.cert-image {
+    flex: 1;
+}
+
+.cert-image img {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
+    height: auto;          /* prevents cutting */
+    border-radius: 10px;
+    object-fit: contain;   /* ensures full image visible */
 }
+
+
+/* ===============================
+   CONTENT SECTION
+================================= */
 
 .cert-content {
-    padding: 20px;
+    flex: 1.2;
+}
+
+.cert-content h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.cert-content .issuer {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 15px;
 }
 
 .cert-content p {
-    color: #6b7280;
-    font-size: 14px;
+    font-size: 15px;
+    color: #374151;
+    margin-bottom: 20px;
 }
 
-/* ===== BUTTON ===== */
+
+/* ===============================
+   BUTTON STYLE
+================================= */
+
 .btn {
     display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
+    padding: 9px 18px;
     background-color: #1f2937;
     color: white;
     text-decoration: none;
-    border-radius: 8px;
-    transition: 0.3s ease;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
     background-color: #111827;
 }
 
-/* ===== FOOTER ===== */
+
+/* ===============================
+   FOOTER
+================================= */
+
 footer {
-    background: #1f2937;
+    background-color: #1f2937;
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    padding: 25px 20px;
+    margin-top: 60px;
+    font-size: 14px;
 }
 
-/* ===== ANIMATION ===== */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 992px) {
+    .cert-box {
+        gap: 25px;
+    }
 }
 
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-    .cert-card img {
-        height: 180px;
+    .cert-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cert-image img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .cert-content h3 {
+        font-size: 18px;
+    }
+
+    .cert-content p {
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .back-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .navbar {
+        padding: 12px 15px;
     }
 }
