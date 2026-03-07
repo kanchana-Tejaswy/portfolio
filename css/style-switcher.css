@@ -1,98 +1,160 @@
+/* ================= SPIN ANIMATION ================= */
+
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
 }
 
-.style-switcher-toggler i {
-    animation: spin 2s linear infinite;
-}
-.style-switcher {
-    position: fixed;
-    right: 0;
-    top: 60px;
-    padding: 15px;
-    width: 200px;
-    border: 1px solid var(--bg-black-50);
-    background: var(--bg-black-100);
-    z-index: 101;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-    transform: translateX(100%);
-} 
-
-.style-switcher.open {
-    transform: translateX(0);
+.style-switcher-toggler i{
+animation: spin 2s linear infinite;
 }
 
+/* ================= MAIN SWITCHER PANEL ================= */
 
-.style-switcher .s-icon {
-    position: absolute;
-    top: 0;
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    font-size: 20px;
-    background: var(--bg-black-100);
-    color: var(--text-black-900);
-    right: 100%;
-    border: 1px solid var(--bg-black-50);
-    margin-right: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 50%;
+.style-switcher{
+position: fixed;
+right: 0;
+top: 60px;
+padding: 18px;
+width: 200px;
+border: 1px solid var(--bg-black-50);
+background: var(--bg-black-100);
+z-index: 101;
+border-radius: 6px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+transform: translateX(100%);
+box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-.style-switcher .s-icon i {
-    line-height: 40px;
+.style-switcher.open{
+transform: translateX(0);
 }
 
-.style-switcher .style-switcher-toggler {
-    top: 0;
-    animation: spin 2s linear infinite;
+/* ================= ICON BUTTONS ================= */
+
+.style-switcher .s-icon{
+position: absolute;
+top: 0;
+height: 40px;
+width: 40px;
+text-align: center;
+font-size: 20px;
+background: var(--bg-black-100);
+color: var(--text-black-900);
+right: 100%;
+border: 1px solid var(--bg-black-50);
+margin-right: 25px;
+cursor: pointer;
+transition: all 0.3s ease;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
-.style-switcher .day-night {
-    top: 55px;
+/* hover effect */
+
+.style-switcher .s-icon:hover{
+background: var(--skin-color);
+color: #fff;
+transform: scale(1.05);
 }
 
-.style-switcher h4 {
-    margin: 0 0 10px;
-    color: var(--text-black-700);
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: capitalize;
+.style-switcher .s-icon i{
+line-height: 40px;
 }
 
-.style-switcher .colors {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+/* SETTINGS BUTTON */
+
+.style-switcher .style-switcher-toggler{
+top: 0;
+animation: spin 2s linear infinite;
 }
 
-.style-switcher .colors span {
-    display: inline-block; /* FIXED - 'circle' is invalid */
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
+/* DAY NIGHT BUTTON */
+
+.style-switcher .day-night{
+top: 55px;
 }
 
-/* Theme colors */
-.style-switcher .color-1 {
-    background: #ec1839;
+/* ================= TITLE ================= */
+
+.style-switcher h4{
+margin: 0 0 12px;
+color: var(--text-black-700);
+font-size: 16px;
+font-weight: 600;
+text-transform: capitalize;
 }
 
-.style-switcher .color-2 {
-    background: #fa5b0f;
+/* ================= COLOR BOX ================= */
+
+.style-switcher .colors{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+gap: 8px;
 }
 
-.style-switcher .color-3 {
-    background: #37b182;
+/* COLOR CIRCLE */
+
+.style-switcher .colors span{
+display: inline-block;
+height: 30px;
+width: 30px;
+border-radius: 50%;
+cursor: pointer;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.style-switcher .color-4 {
-    background: #1854b4;
+/* hover animation */
+
+.style-switcher .colors span:hover{
+transform: scale(1.15);
+box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.style-switcher .color-5 {
-    background: #f021b2;
+/* ================= THEME COLORS ================= */
+
+.style-switcher .color-1{
+background:#ec1839;
+}
+
+.style-switcher .color-2{
+background:#fa5b0f;
+}
+
+.style-switcher .color-3{
+background:#37b182;
+}
+
+.style-switcher .color-4{
+background:#1854b4;
+}
+
+.style-switcher .color-5{
+background:#f021b2;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+.style-switcher{
+top:50px;
+width:180px;
+padding:15px;
+}
+
+.style-switcher .s-icon{
+height:35px;
+width:35px;
+font-size:18px;
+}
+
+.style-switcher .colors span{
+height:26px;
+width:26px;
+}
+
 }
