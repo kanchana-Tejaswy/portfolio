@@ -117,6 +117,25 @@ footer {
     transform: translateY(0);
 }
 
+/* ===== YOUTUBE LINK BUTTON ===== */
+
+.youtube-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background-color: #08253a;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.youtube-btn:hover {
+    background-color: #08253a;
+    transform: translateY(-2px);
+}
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .activity-card img {
