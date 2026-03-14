@@ -141,3 +141,59 @@ function asideSectionToggleBtn()
         allSection[i].classList.toggle("open");
     }
 }
+
+/* ===== Contact Form Submission ===== */
+const submitBtn = document.getElementById("submit-btn");
+if (submitBtn) {
+    submitBtn.addEventListener("click", async function(event) {
+        event.preventDefault(); // Prevent default form submission behavior
+
+        // Get input values
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        // Basic validation
+        if (!name || !email || !message) {
+            alert("Please fill in all required fields (Name, Email, Message).");
+            return;
+        }
+
+        // Change button text while sending
+        const originalText = submitBtn.innerText;
+        submitBtn.innerText = "Sending...";
+        submitBtn.disabled = true;
+
+        try {
+            // Send data to backend
+            const response = await fetch("http://localhost:3000/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ name, email, subject, message })
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                alert("Message sent successfully!");
+                // Clear the form
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("subject").value = "";
+                document.getElementById("message").value = "";
+            } else {
+                alert("Error: " + (result.error || "Failed to send message."));
+            }
+        } catch (error) {
+            console.error("Error submitting contact form:", error);
+            alert("A network error occurred. Please try again later.");
+        } finally {
+            // Restore button state
+            submitBtn.innerText = originalText;
+            submitBtn.disabled = false;
+        }
+    });
+}

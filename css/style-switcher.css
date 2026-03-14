@@ -138,23 +138,29 @@ background:#f021b2;
 
 /* ================= MOBILE RESPONSIVE ================= */
 
-@media(max-width:768px){
+/* ================= MOBILE RESPONSIVE ================= */
 
-.style-switcher{
-top:50px;
-width:180px;
-padding:15px;
-}
+@media (max-width: 768px) {
 
-.style-switcher .s-icon{
-height:35px;
-width:35px;
-font-size:18px;
-}
+    .style-switcher {
+        top: 50px;
+        width: 180px;
+        padding: 15px;
+    }
 
-.style-switcher .colors span{
-height:26px;
-width:26px;
-}
+    .style-switcher .s-icon {
+        height: 35px;
+        width: 35px;
+        font-size: 18px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .style-switcher .colors span {
+        height: 26px;
+        width: 26px;
+        display: inline-block;
+        border-radius: 50%;
+    }
 
 }
