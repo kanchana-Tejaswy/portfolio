@@ -762,27 +762,35 @@ h3.my-profession
     margin-top: 40px;
 }
 
-.portfolio .portfolio-item
+.portfolio .portfolio-items
 {
-    flex: 0 0 33.33%;
+     flex: 0 0 33.33%;
     max-width: 33.33%;
-    margin-bottom: 30px;
+    padding: 15px;
+
 }
 
 .portfolio .portfolio-image img
 {
-     width: 100%;
-    height: auto;
-    max-height: 220px;
+    width: 100%;
+    height: 220px;
     object-fit: cover;
     border-radius: 8px;
-    transition: 0.3s;
+    transition: 0.4s ease;
 }
 
 .portfolio .portfolio-image img:hover
 {
     transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
+
+.portfolio .portfolio-image
+{
+    overflow: hidden;
+    border-radius: 8px;
+}
+
 
 /* contact title */
 
@@ -909,6 +917,7 @@ h3.my-profession
     {
         display: flex;
         left: 30px;
+        z-index: 100;
     }
 
     .aside.open .nav-toggler
@@ -926,6 +935,7 @@ h3.my-profession
     .section.open
     {
         left: 270px;
+        right: -270px;
     }
 
     /* Personal Info Text Stack */
@@ -947,7 +957,7 @@ h3.my-profession
 {
     /* Grid Layout Adjustments */
     .contact .contact-info-item,
-    .portfolio .portfolio-item,
+    .portfolio .portfolio-items,
     .service .service-item
     {
         flex: 0 0 50%;
@@ -969,7 +979,8 @@ h3.my-profession
 
     .home .home-img
     {
-        display: none;
+        display: block;
+        margin-top: 40px;
     }
 
     .section-title h2{
@@ -984,7 +995,7 @@ h3.my-profession
     /* Full Width Layout */
     .contact .contact-form .col-6,
     .contact .contact-info-item,
-    .portfolio .portfolio-item,
+    .portfolio .portfolio-items,
     .service .service-item,
     .about .about-content .experience,
     .about .about-content .education,
@@ -1103,4 +1114,16 @@ h3.my-profession
         width:100%;
     }
 
+}
+
+/* ===== Custom Mobile Layout for Home ===== */
+@media (max-width: 767px) {
+    .home .home-img {
+        order: -1;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+    .home .home-info {
+        order: 1;
+    }
 }
