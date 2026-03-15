@@ -524,7 +524,8 @@ h3.my-profession
 {
     flex: 0 0 100%;
     max-width: 100%;
-    
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .about .about-content .skill-item h5
 {
