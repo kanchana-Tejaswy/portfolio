@@ -3,7 +3,7 @@
 <p align="center">
 🚀 Certified UiPath Developer | Full-Stack Portfolio | AI & Automation Enthusiast
 </p>
-
+live link of this portfolio https://tejaswy-portfolio.netlify.app/
 <hr>
 
 <h2>📌 Project Overview</h2>
