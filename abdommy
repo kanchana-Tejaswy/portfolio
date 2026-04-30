@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Certifications | Tejaswy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="certification.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2 class="logo">My Certifications</h2>
+            <button class="back-btn" onclick="window.location.href='index.html'">
+                ← Back to Portfolio
+            </button>
+        </div>
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero">
+        <h1>Professional Certifications</h1>
+        <p>Recognitions & Credentials in Automation and Technology</p>
+    </section>
+
+    <!-- ================= CERTIFICATIONS SECTION ================= -->
+    <section class="certifications">
+
+        <!-- ===== Certification 1 ===== -->
+        <div class="cert-box">
+
+            <!-- LEFT IMAGE -->
+            <div class="cert-image">
+                <img src="upadc.jpg" alt="UiPath Associate Developer Certification">
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="cert-content">
+                <h3>UiPath Associate Developer</h3>
+                <p class="issuer">Issued by UiPath | 2025</p>
+
+             <h1>UiPath Automation Developer Associate Certification</h1>
+
+<p>
+I’m happy to share that I have successfully earned the 
+<strong>UiPath Certified Professional – Automation Developer Associate Certification</strong>. 
+This is my <strong>first global certification in Robotic Process Automation (RPA)</strong> and an important milestone in my automation journey.
+</p>
+
+<p>
+A sincere thanks to my mentor <strong>Krishnanand S H</strong> for his guidance and support in helping me understand UiPath fundamentals and develop practical automation solutions.
+</p>
+
+<h3>Key Automation Projects</h3>
+<ul>
+<li><strong>Hello World Bot</strong> – Basic Notepad automation using UiPath</li>
+<li><strong>ACME Bot</strong> – Automation workflow based on ACME platform scenarios</li>
+<li><strong>Bank Loan Approval Bot</strong> – Automated loan decision workflow</li>
+<li><strong>ID Card Generator Bot</strong> – Automated ID card generation from data</li>
+</ul>
+
+<h3>Skills Strengthened</h3>
+<ul>
+<li>UiPath Orchestrator</li>
+<li>REFramework</li>
+<li>Exception Handling & Debugging</li>
+<li>Real-world RPA Automation</li>
+</ul>
+
+<p>
+Special thanks to my seniors <strong>Tejaswi Marka, Devupalli Jayanth, Varun Manchikanti,</strong> and <strong>Shivathmika Bollapally</strong> for their continuous support and encouragement.
+</p>
+
+<p>
+I look forward to building more impactful automation solutions and growing further in the field of <strong>Robotic Process Automation</strong>.
+</p>
+
+
+                <a href="https://drive.google.com/file/d/1kaujFEDmpRTj94_2lP8Ig2CZhnVHaseV/view?usp=sharing"
+                   class="btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   View Certification
+                </a>
+
+                <a href="otrupcrt.html"
+                   class="btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   view Other 3 certificationsof UiPath
+                </a>
+            </div>
+
+        </div>
+
+        <!-- ===== Certification 2 ===== -->
+        <div class="cert-box">
+
+            <div class="cert-image">
+                <img src="basic programming using python.jpg" alt="Basic Python Programming">
+            </div>
+
+            <div class="cert-content">
+               <h1>Python Development Workshop</h1>
+                <p class="issuer">Issued by IIT Bhombay | 2025</p>
+
+              <section class="workshop-section">
+
+  <p>
+I successfully completed a <strong>Python Development Workshop</strong> that focused on building strong foundations in Python programming, data visualization, and problem solving through hands-on practice and real-world examples.
+</p>
+
+<h3>Key Topics Covered</h3>
+<ul>
+<li>Python basics – data types, strings, arithmetic operations</li>
+<li>Control flow – conditional statements and loops</li>
+<li>Core data structures – lists, tuples, dictionaries, and sets</li>
+<li>Functions and file handling</li>
+<li>Modules and exception handling</li>
+<li>Data visualization and plotting</li>
+<li>NumPy arrays and matrix operations</li>
+<li>Introduction to image processing</li>
+</ul>
+
+<p>
+This workshop strengthened my <strong>Python programming fundamentals</strong> and enhanced my <strong>problem-solving skills</strong>.
+</p>
+
+<h3>Faculty Coordinators and Mentors</h3>
+<ul>
+<li><strong>M.V. Vijaya Saradhi</strong></li>
+<li><strong>A. Ramesh</strong></li>
+<li><strong>Ch. Srivatsa</strong></li>
+<li><strong>P. Swaroopa</strong></li>
+<li><strong>D. Aswani</strong></li>
+<li><strong>Jaichand</strong></li>
+<li><strong>V. Chandra Sekhar</strong></li>
+<li><strong>Rethvik</strong></li>
+</ul>
+
+</section>
+                <a href="#"
+                   class="btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   View Certificate
+                </a>
+            </div>
+
+        </div>
+
+         <!-- ===== Certification 3 ===== -->
+
+  
+   <div class="cert-box fade-in">
+
+    <div class="cert-image">
+        <img src="ai ml eduskill intern certificate .png" alt="Google AI-ML Internship Certificate">
+    </div>
+
+    <div class="cert-content">
+
+        <h3>Google AI-ML Virtual Internship</h3>
+
+        <p class="issuer">
+            AICTE – EduSkills | Google Developers | Jan 2026 – Mar 2026
+        </p>
+
+        <p>
+            Completed a <strong>10-Week Google AI-ML Internship</strong> focused on 
+            Artificial Intelligence, Machine Learning, and Computer Vision 
+            implementation through real-world projects.
+        </p>
+
+        <h4>Learning Highlights</h4>
+        <ul class="cert-list">
+
+            <li>
+                <strong>Machine Learning Fundamentals :</strong>
+                Neural networks, supervised learning workflows,
+                and model evaluation techniques.
+            </li>
+
+            <li>
+                <strong>Deep Learning with TensorFlow :</strong>
+                Built deep learning models and explored industry AI development practices.
+            </li>
+
+            <li>
+                <strong>Computer Vision :</strong>
+                Image processing, feature extraction, and vision-based AI systems.
+            </li>
+
+            <li>
+                <strong>Model Deployment :</strong>
+                Optimized and deployed models using TensorFlow Lite.
+            </li>
+
+        </ul>
+
+        <h4>Projects Implemented</h4>
+        <ul class="cert-list">
+
+            <li>
+                <strong>Image Classification Model</strong> — trained models for object recognition.
+            </li>
+
+            <li>
+                <strong>Object Detection System</strong> — implemented pretrained and custom detection models.
+            </li>
+
+            <li>
+                <strong>Product Image Search</strong> — similarity-based computer vision retrieval system.
+            </li>
+
+            <li>
+                <strong>End-to-End AI Pipeline</strong> — simulated real-world AI application workflow.
+            </li>
+
+        </ul>
+
+        <h4>Skills Gained</h4>
+        <p class="skills">
+            Artificial Intelligence • Machine Learning • Deep Learning • 
+            TensorFlow • Computer Vision • Model Training • AI Deployment
+        </p>
+
+        <p>
+            This internship strengthened my foundation in building
+            <strong>AI-powered automation systems</strong> and supports my goal
+            of becoming an <strong>AI Automation Engineer</strong>.
+        </p>
+
+        <a href="#" class="btn" target="_blank">
+            View Certificate
+        </a>
+
+    </div>
+
+</div>
+
+         <!-- ===== Certification 4 ===== -->
+        <div class="cert-box">
+
+            <div class="cert-image">
+                <img src="gfg python certificate.jpg" alt="Basic Python Programming">
+            </div>
+
+            <div class="cert-content">
+                <h3>Basic Python Programming</h3>
+                <p class="issuer">Issued by Geeks for Geeks  | 2025</p>
+
+                <p>
+                    Completed hands-on training in basic Python
+                </p>
+
+                <a href="#"
+                   class="btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   View Certificate
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>© 2026 Tejaswy | Built with Discipline</p>
+    </footer>
+
+</body>
+</html>

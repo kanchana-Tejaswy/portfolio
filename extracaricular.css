@@ -1,175 +1,295 @@
-/* ===== GENERAL ===== */
-body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: #f3f4f6;
-    color: #1f2937;
+/* =====================================================
+RESET
+===================================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-h1, h2, h3 {
-    font-family: 'Poppins', sans-serif;
+body{
+font-family:'Inter',sans-serif;
+background:#f7f9fc;
+color:#111827;
+line-height:1.7;
+overflow-x:hidden;
 }
 
-section {
-    padding: 60px 20px;
+h1,h2,h3{
+font-family:'Poppins',sans-serif;
+color:#111827;
+letter-spacing:.5px;
 }
 
-/* ===== NAVBAR ===== */
-.navbar {
-    background-color: #1f2937;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/* =====================================================
+SECTION
+===================================================== */
+
+section{
+padding:90px 8%;
+max-width:1300px;
+margin:auto;
 }
 
-.nav-container {
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
+/* =====================================================
+NAVBAR — CHATGPT STYLE
+===================================================== */
+
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
+
+background:#ffffff;
+border-bottom:1px solid #e5e7eb;
 }
 
-.back-btn {
-    background: white;
-    color: #1f2937;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s ease;
+.nav-container{
+max-width:1300px;
+margin:auto;
+padding:18px 25px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
 }
 
-.back-btn:hover {
-    background: #e5e7eb;
+.logo{
+font-size:18px;
+font-weight:600;
+color:#10a37f;
 }
 
-/* ===== HERO ===== */
-.hero {
-    text-align: center;
-    background: #1f2937;
-    color: white;
-    padding: 60px 20px;
+/* BACK BUTTON */
+
+.back-btn{
+background:#10a37f;
+color:#fff;
+
+border:none;
+padding:9px 18px;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
 }
 
-/* ===== ACTIVITIES GRID ===== */
-.activities {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+.back-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 6px 18px rgba(16,163,127,.25);
 }
 
-.activity-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
+/* =====================================================
+HERO
+===================================================== */
+
+.hero{
+text-align:center;
+padding:110px 20px;
+
+background:
+radial-gradient(
+circle at top,
+rgba(16,163,127,.08),
+transparent 70%
+);
 }
 
-.activity-card:hover {
-    transform: translateY(-8px);
+.hero h1{
+font-size:2.6rem;
+margin-bottom:12px;
 }
 
-.activity-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+.hero p{
+color:#6b7280;
 }
 
-.activity-content {
-    padding: 20px;
+/* =====================================================
+ACTIVITIES GRID
+===================================================== */
+
+.activities{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:35px;
+margin-top:40px;
 }
 
-.activity-content p {
-    color: #6b7280;
-    font-size: 14px;
+/* =====================================================
+CARD — LIGHT CHATGPT CARD
+===================================================== */
+
+.activity-card{
+background:#ffffff;
+border-radius:18px;
+overflow:hidden;
+
+border:1px solid #e5e7eb;
+
+transition:.35s;
+display:flex;
+flex-direction:column;
 }
 
-.activity-content ul {
-    padding-left: 18px;
-    color: #374151;
-    font-size: 14px;
+.activity-card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 60px rgba(0,0,0,.08);
 }
 
-/* ===== FOOTER ===== */
-footer {
-    background: #1f2937;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+/* IMAGE */
+
+.activity-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+transition:.35s;
 }
 
-/* ===== FADE IN ===== */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
+.activity-card:hover img{
+transform:scale(1.04);
 }
 
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
+/* CONTENT */
+
+.activity-content{
+padding:24px;
+display:flex;
+flex-direction:column;
+height:100%;
 }
 
-/* ===== YOUTUBE LINK BUTTON ===== */
-
-.youtube-btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 18px;
-    background-color: #08253a;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    transition: all 0.3s ease;
+.activity-card h2{
+font-size:20px;
+margin-bottom:12px;
 }
 
-.youtube-btn:hover {
-    background-color: #08253a;
-    transform: translateY(-2px);
-}
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-    .activity-card img {
-        height: 180px;
-    }
-
-    .activities {
-        padding: 40px 20px;
-    }
+.activity-card p{
+color:#6b7280;
+margin-bottom:14px;
 }
 
-@media (max-width: 480px) {
-    .logo {
-        font-size: 16px;
-    }
+.activity-card ul{
+padding-left:18px;
+margin-bottom:15px;
+}
 
-    .back-btn {
-        padding: 6px 12px;
-        font-size: 14px;
-    }
+.activity-card li{
+margin-bottom:6px;
+color:#374151;
+}
 
-    .navbar {
-        padding: 12px 15px;
-    }
+/* =====================================================
+CHATGPT BUTTON SYSTEM
+===================================================== */
 
-    .activities {
-        padding: 20px 10px;
-    }
+.youtube-btn{
 
-    .hero {
-        padding: 40px 10px;
-    }
+display:inline-flex;
+justify-content:center;
+align-items:center;
 
-    .activity-card img {
-        height: 150px;
-    }
+margin-top:auto;
+
+padding:12px 22px;
+
+background:#10a37f;
+color:#fff;
+
+border-radius:8px;
+border:none;
+
+text-decoration:none;
+font-size:14px;
+font-weight:500;
+
+transition:.3s;
+
+width:auto;
+max-width:260px;
+white-space:nowrap;
+}
+
+.youtube-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 6px 18px rgba(16,163,127,.3);
+}
+
+.activity-content .youtube-btn{
+align-self:flex-start;
+}
+
+/* =====================================================
+FOOTER
+===================================================== */
+
+footer{
+background:#ffffff;
+border-top:1px solid #e5e7eb;
+text-align:center;
+padding:30px;
+color:#6b7280;
+}
+
+/* =====================================================
+RESPONSIVE DESIGN
+===================================================== */
+
+/* LAPTOP */
+
+@media(max-width:1024px){
+
+.activities{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* TABLET */
+
+@media(max-width:768px){
+
+.activities{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:2rem;
+}
+
+.activity-card img{
+height:190px;
+}
+
+section{
+padding:70px 6%;
+}
+
+.activity-content .youtube-btn{
+align-self:center;
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+.nav-container{
+flex-direction:column;
+gap:12px;
+text-align:center;
+}
+
+.back-btn{
+width:100%;
+max-width:260px;
+}
+
+.youtube-btn{
+width:100%;
+max-width:100%;
+white-space:normal;
+}
+
 }

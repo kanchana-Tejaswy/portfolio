@@ -1,268 +1,301 @@
-/* ===============================
-   GLOBAL STYLES
-================================= */
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f3f4f6;
-    color: #1f2937;
-    line-height: 1.6;
+body{
+font-family:'Inter',sans-serif;
+
+background:#f7f9fc;
+color:#111827;
+line-height:1.7;
+overflow-x:hidden;
 }
 
-h1, h2 {
-    font-family: 'Poppins', sans-serif;
+h1,h2,h3{
+font-family:'Poppins',sans-serif;
+color:#111827;
+letter-spacing:.4px;
 }
 
-section {
-    padding: 70px 20px;
+section{
+padding:100px 8%;
+max-width:1300px;
+margin:auto;
 }
 
+/* =====================================================
+   NAVBAR — CHATGPT STYLE
+===================================================== */
 
-/* ===============================
-   NAVBAR
-================================= */
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
 
-.navbar {
-    background-color: #1f2937;
-    color: white;
-    padding: 18px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+background:#ffffff;
+border-bottom:1px solid #e5e7eb;
 }
 
-.nav-container {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nav-container{
+max-width:1300px;
+margin:auto;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:18px 25px;
 }
 
-.logo {
-    font-size: 20px;
-    font-weight: 600;
+.logo{
+font-size:22px;
+font-weight:600;
+color:#10a37f;
 }
 
-.back-btn {
-    background: white;
-    color: #1f2937;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+/* BACK BUTTON */
+
+.back-btn{
+background:#10a37f;
+color:#fff;
+
+border:none;
+border-radius:8px;
+
+padding:10px 22px;
+cursor:pointer;
+
+transition:.3s ease;
 }
 
-.back-btn:hover {
-    background-color: #e5e7eb;
+.back-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 6px 18px rgba(16,163,127,.25);
 }
 
-
-/* ===============================
+/* =====================================================
    SECTION TITLE
-================================= */
+===================================================== */
 
-.section {
-    max-width: 1200px;
-    margin: auto;
+.section-title{
+font-size:38px;
+text-align:center;
+margin-bottom:70px;
+position:relative;
 }
 
-.section-title {
-    font-size: 32px;
-    margin-bottom: 50px;
-    text-align: center;
+.section-title::after{
+content:"";
+display:block;
+
+width:170px;
+height:3px;
+margin:18px auto;
+
+background:#10a37f;
+border-radius:4px;
 }
 
-.gray-section {
-    background-color: #e5e7eb;
+/* =====================================================
+   PROJECT CARD
+===================================================== */
+
+.project-box{
+
+display:flex;
+align-items:center;
+gap:50px;
+
+padding:45px;
+margin-bottom:65px;
+
+background:#ffffff;
+
+border-radius:16px;
+border:1px solid #e5e7eb;
+
+transition:.35s ease;
 }
 
+/* hover */
 
-/* ===============================
-   PROJECT BOX
-================================= */
-
-.project-box {
-    background: #ffffff;
-    display: flex;
-    gap: 40px;
-    padding: 30px;
-    border-radius: 14px;
-    margin-bottom: 40px;
-    transition: all 0.4s ease;
-    align-items: center;
+.project-box:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 40px rgba(0,0,0,.08);
 }
 
-/* Hover Shadow Effect */
-.project-box:hover {
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
-    transform: translateY(-6px);
-}
-
-
-/* ===============================
+/* =====================================================
    VIDEO SECTION
-================================= */
+===================================================== */
 
-.project-video {
-    flex: 1;
+.project-video{
+flex:1;
 }
 
-.project-video video {
-    width: 100%;
-    max-width: 420px;
-    border-radius: 10px;
+.project-video video{
+
+width:100%;
+max-width:460px;
+
+border-radius:12px;
+transition:.35s ease;
 }
 
-
-/* ===============================
-   CONTENT SECTION
-================================= */
-
-.project-content {
-    flex: 1.2;
+.project-box:hover video{
+transform:scale(1.04);
 }
 
-.project-content h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.project-content{
+flex:1.2;
 }
 
-.project-content p {
-    color: #6b7280;
-    margin-bottom: 20px;
-    font-size: 15px;
+.project-content h2{
+font-size:26px;
+margin-bottom:15px;
 }
 
-
-/* ===============================
-   BUTTON
-================================= */
-
-.btn {
-    display: inline-block;
-    padding: 9px 18px;
-    background-color: #1f2937;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    font-size: 14px;
+.project-content p{
+color:#6b7280;
+margin-bottom:14px;
 }
 
-.btn:hover {
-    background-color: #111827;
+.project-content strong{
+color:#111827;
 }
 
-
-/* ===============================
-   ANIMATION (Scroll Reveal)
-================================= */
-
-.hidden {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
+.project-content ul{
+padding-left:20px;
+margin-bottom:18px;
 }
 
-.show {
-    opacity: 1;
-    transform: translateY(0);
+.project-content li{
+margin-bottom:8px;
+color:#4b5563;
 }
 
+/* =====================================================
+   BUTTON SYSTEM — CHATGPT STYLE
+===================================================== */
 
-/* ===============================
+.btn{
+
+display:inline-block;
+padding:12px 26px;
+
+background:#10a37f;
+color:#fff;
+
+border-radius:8px;
+text-decoration:none;
+font-weight:500;
+
+transition:.3s ease;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+box-shadow:0 6px 18px rgba(16,163,127,.25);
+}
+
+.btn:active{
+transform:scale(.96);
+}
+
+/* =====================================================
    FOOTER
-================================= */
+===================================================== */
 
-footer {
-    background-color: #1f2937;
-    color: white;
-    text-align: center;
-    padding: 25px 20px;
-    margin-top: 60px;
-    font-size: 14px;
+footer{
+background:#ffffff;
+
+border-top:1px solid #e5e7eb;
+
+text-align:center;
+padding:40px;
+margin-top:90px;
+
+color:#6b7280;
+font-size:14px;
 }
 
+/* =====================================================
+   SCROLL REVEAL ANIMATION
+===================================================== */
 
-/* ===============================
+.project-box{
+opacity:0;
+transform:translateY(50px);
+animation:fadeUp .9s ease forwards;
+}
+
+.project-box:nth-child(2){animation-delay:.1s;}
+.project-box:nth-child(3){animation-delay:.2s;}
+.project-box:nth-child(4){animation-delay:.3s;}
+
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* =====================================================
    RESPONSIVE DESIGN
-================================= */
+===================================================== */
 
-@media (max-width: 992px) {
-    .project-box {
-        gap: 25px;
-    }
+@media(max-width:1000px){
 
-    .section-title {
-        font-size: 26px;
-    }
+.project-box{
+flex-direction:column;
+text-align:center;
 }
 
-@media (max-width: 768px) {
-
-    .project-box {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .project-video video {
-        max-width: 100%;
-    }
-
-    .project-content {
-        margin-top: 15px;
-    }
-
-    .section {
-        padding: 20px;
-    }
+.project-video video{
+max-width:100%;
 }
 
-@media (max-width: 480px) {
+}
 
-    .section-title {
-        font-size: 22px;
-    }
+@media(max-width:768px){
 
-    .project-content h2 {
-        font-size: 18px;
-    }
+section{
+padding:80px 6%;
+}
 
-    .project-content p {
-        font-size: 14px;
-    }
+.section-title{
+font-size:28px;
+}
 
-    .logo {
-        font-size: 16px;
-    }
+.project-content h2{
+font-size:22px;
+}
 
-    .back-btn {
-        padding: 6px 12px;
-        font-size: 14px;
-    }
+}
 
-    .navbar {
-        padding: 12px 15px;
-    }
+@media(max-width:480px){
 
-    .section {
-        padding: 10px;
-    }
+.logo{
+font-size:18px;
+}
 
-    .project-box {
-        padding: 20px;
-        gap: 20px;
-    }
+.back-btn{
+padding:8px 16px;
+font-size:14px;
+}
 
-    .section-title {
-        margin-bottom: 30px;
-    }
+.project-box{
+padding:28px;
+}
+
 }

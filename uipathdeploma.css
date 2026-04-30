@@ -1,0 +1,189 @@
+/* ================= ROOT (CHATGPT LIGHT THEME) ================= */
+
+:root{
+    --bg:#f7f9fc;
+    --card:#ffffff;
+    --text:#111827;
+    --muted:#6b7280;
+    --accent:#10a37f;   /* ChatGPT green */
+    --border:#e5e7eb;
+    --shadow:rgba(0,0,0,0.08);
+}
+
+/* ================= RESET ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    min-height:100vh;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    background:#ffffff;
+    border-bottom:1px solid var(--border);
+    padding:1rem 2rem;
+}
+
+.nav-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.logo{
+    font-size:1.2rem;
+    font-weight:600;
+    color:var(--accent);
+}
+
+/* ================= BUTTON ================= */
+
+.back-btn{
+    background:var(--accent);
+    color:white;
+    border:none;
+    padding:.65rem 1.4rem;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.back-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 18px rgba(16,163,127,.25);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    text-align:center;
+    padding:3rem 1.5rem;
+}
+
+.hero h1{
+    font-size:clamp(2rem,4vw,2.6rem);
+    font-weight:700;
+}
+
+.hero p{
+    margin-top:.5rem;
+    color:var(--muted);
+}
+
+/* ================= SECTION ================= */
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:2rem 1.5rem;
+}
+
+.section-title{
+    text-align:center;
+    font-size:1.7rem;
+    margin-bottom:2rem;
+}
+
+/* ================= GRID ================= */
+
+.activities{
+    display:grid;
+    gap:1.6rem;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+}
+
+/* ================= CARD (CHATGPT STYLE) ================= */
+
+.activity-card{
+    background:var(--card);
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid var(--border);
+    transition:.25s;
+}
+
+.activity-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 30px var(--shadow);
+}
+
+/* IMAGE */
+
+.activity-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+/* CONTENT */
+
+.activity-content{
+    padding:1.3rem;
+}
+
+.activity-content h2{
+    font-size:1.15rem;
+    margin-bottom:.5rem;
+}
+
+.activity-content p{
+    color:var(--muted);
+    line-height:1.6;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    margin-top:3rem;
+    text-align:center;
+    padding:1.5rem;
+    background:#ffffff;
+    border-top:1px solid var(--border);
+    color:var(--muted);
+}
+
+/* ================= CHATGPT FEEL HOVER ================= */
+
+.activity-card:hover{
+    border-color:var(--accent);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    .hero{
+        padding:2rem 1rem;
+    }
+
+    .section{
+        padding:1.5rem 1rem;
+    }
+
+    .back-btn{
+        width:100%;
+        margin-top:.5rem;
+    }
+}
+
+@media(max-width:480px){
+
+    .hero h1{
+        font-size:1.7rem;
+    }
+
+    .section-title{
+        font-size:1.3rem;
+    }
+}
