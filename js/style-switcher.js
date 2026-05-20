@@ -38,6 +38,19 @@ const alternateStyles = document.querySelectorAll(".alternate-style");
 
 const dayNight = document.querySelector(".day-night");
 
+function updateThemeImages() {
+    const themeImages = document.querySelectorAll(".theme-img");
+    const isDark = document.body.classList.contains("dark");
+    
+    themeImages.forEach(img => {
+        if (isDark) {
+            img.src = img.getAttribute("data-dark");
+        } else {
+            img.src = img.getAttribute("data-light");
+        }
+    });
+}
+
 function updateIcon() {
     const icon = dayNight.querySelector("i");
     if (document.body.classList.contains("dark")) {
@@ -52,6 +65,7 @@ function updateIcon() {
 dayNight.addEventListener("click", () => {
     document.body.classList.toggle("dark");
     updateIcon();
+    updateThemeImages();
     
     // Use the variable for dark mode storage
     localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
@@ -73,4 +87,5 @@ window.addEventListener("load", () => {
 
     // Set correct icon on load
     updateIcon();
+    updateThemeImages();
 });
