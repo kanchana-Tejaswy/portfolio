@@ -142,27 +142,77 @@ function asideSectionToggleBtn()
     }
 }
 
+/* ===== Copy Email Function ===== */
+function copyEmail() {
+    const emailText = document.getElementById("contact-email").innerText;
+    const copyBtn = document.querySelector(".copy-btn");
+    const originalIcon = copyBtn.innerHTML;
+
+    navigator.clipboard.writeText(emailText).then(() => {
+        // Show feedback
+        copyBtn.innerHTML = '<i class="fas fa-check" style="color: #28a745;"></i>';
+        
+        // Reset after 2 seconds
+        setTimeout(() => {
+            copyBtn.innerHTML = originalIcon;
+        }, 2000);
+    }).catch(err => {
+        console.error("Failed to copy email: ", err);
+    });
+}
+
 /* ===== Contact Form Submission ===== */
 const submitBtn = document.getElementById("submit-btn");
+const formMessage = document.getElementById("form-message");
+
 if (submitBtn) {
     submitBtn.addEventListener("click", async function(event) {
         event.preventDefault(); // Prevent default form submission behavior
 
-        // Get input values
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const subject = document.getElementById("subject").value.trim();
-        const message = document.getElementById("message").value.trim();
+        // Get input elements and values
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const subjectInput = document.getElementById("subject");
+        const phoneInput = document.getElementById("phone");
+        const messageInput = document.getElementById("message");
+
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const subject = subjectInput.value.trim();
+        const phone = phoneInput.value.trim();
+        const message = messageInput.value.trim();
+
+        // Reset previous validation states and messages
+        [nameInput, emailInput, messageInput].forEach(input => input.style.borderColor = "");
+        formMessage.className = "form-message";
+        formMessage.innerText = "";
+        formMessage.style.display = "none";
 
         // Basic validation
-        if (!name || !email || !message) {
-            alert("Please fill in all required fields (Name, Email, Message).");
+        let hasError = false;
+        if (!name) {
+            nameInput.style.borderColor = "red";
+            hasError = true;
+        }
+        if (!email || !email.includes("@")) {
+            emailInput.style.borderColor = "red";
+            hasError = true;
+        }
+        if (!message) {
+            messageInput.style.borderColor = "red";
+            hasError = true;
+        }
+
+        if (hasError) {
+            formMessage.innerText = "Please fill in all required fields correctly.";
+            formMessage.classList.add("error");
+            formMessage.style.display = "block";
             return;
         }
 
         // Change button text while sending
         const originalText = submitBtn.innerText;
-        submitBtn.innerText = "Sending...";
+        submitBtn.innerHTML = '<span>Sending...</span> <i class="fas fa-spinner fa-spin"></i>';
         submitBtn.disabled = true;
 
         try {
@@ -172,24 +222,32 @@ if (submitBtn) {
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({ name, email, subject, message })
+                body: JSON.stringify({ name, email, subject, phone, message })
             });
 
             const result = await response.json();
 
             if (response.ok) {
-                alert("Message sent successfully!");
+                formMessage.innerText = "Message sent successfully! I'll get back to you soon.";
+                formMessage.classList.add("success");
+                formMessage.style.display = "block";
+                
                 // Clear the form
-                document.getElementById("name").value = "";
-                document.getElementById("email").value = "";
-                document.getElementById("subject").value = "";
-                document.getElementById("message").value = "";
+                nameInput.value = "";
+                emailInput.value = "";
+                subjectInput.value = "";
+                phoneInput.value = "";
+                messageInput.value = "";
             } else {
-                alert("Error: " + (result.error || "Failed to send message."));
+                formMessage.innerText = "Error: " + (result.error || "Failed to send message.");
+                formMessage.classList.add("error");
+                formMessage.style.display = "block";
             }
         } catch (error) {
             console.error("Error submitting contact form:", error);
-            alert("A network error occurred. Please try again later.");
+            formMessage.innerText = "A network error occurred. Please try again later.";
+            formMessage.classList.add("error");
+            formMessage.style.display = "block";
         } finally {
             // Restore button state
             submitBtn.innerText = originalText;
