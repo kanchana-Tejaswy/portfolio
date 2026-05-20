@@ -107,15 +107,18 @@ function updateNav(element)
 
 /* ===== Hire Me Button ===== */
 
-document.querySelector(".hire-me").addEventListener("click", function ()
-{
-    const sectionIndex = parseInt(this.getAttribute("data-section-index"));
+const hireMeBtn = document.querySelector(".hire-me-btn");
+if (hireMeBtn) {
+    hireMeBtn.addEventListener("click", function ()
+    {
+        const sectionIndex = parseInt(this.getAttribute("data-section-index"));
 
-    showSection(this);
-    updateNav(this);
-    removeBackSection();
-    addBackSection(sectionIndex);
-});
+        showSection(this);
+        updateNav(this);
+        removeBackSection();
+        addBackSection(sectionIndex);
+    });
+}
 
 
 /* ===== Aside Toggle Button ===== */

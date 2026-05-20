@@ -57,14 +57,14 @@ padding:18px 25px;
 .logo{
 font-size:20px;
 font-weight:600;
-color:#10a37f;
+color:#37b182;
 }
 
 
 /* BACK BUTTON */
 
 .back-btn{
-background:#10a37f;
+background:#37b182;
 color:#fff;
 
 border:none;
@@ -101,7 +101,7 @@ width:200px;
 height:4px;
 margin:18px auto 0;
 
-background:#10a37f;
+background:#37b182;
 border-radius:10px;
 }
 
@@ -188,7 +188,7 @@ display:inline-block;
 
 padding:12px 26px;
 
-background:#10a37f;
+background:#37b182;
 color:#fff;
 
 border-radius:8px;
@@ -232,48 +232,75 @@ font-size:14px;
    RESPONSIVE DESIGN
 ===================================================== */
 
-@media(max-width:992px){
+@media(max-width:1000px){
 
-.section-title{
-font-size:30px;
-}
+    .section-title{
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
 
-.project-box{
-gap:30px;
-}
+    .project-box{
+        flex-direction:column;
+        text-align:center;
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .project-video video{
+        max-width:100%;
+        margin: auto;
+    }
+
+    .project-content{
+        width: 100%;
+    }
 }
 
 @media(max-width:768px){
 
-.project-box{
-flex-direction:column;
-text-align:center;
-}
+    section{
+        padding:60px 5%;
+    }
 
-.project-video video{
-max-width:100%;
-}
+    .section-title{
+        font-size:28px;
+    }
 
-section{
-padding:80px 6%;
-}
+    .project-content h2{
+        font-size:22px;
+    }
 }
 
 @media(max-width:480px){
 
-.section-title{
-font-size:24px;
-}
+    .section-title{
+        font-size:24px;
+    }
 
-.logo{
-font-size:16px;
-}
+    .logo{
+        font-size:18px;
+    }
 
-.back-btn{
-padding:7px 14px;
-}
+    .back-btn{
+        padding:8px 16px;
+        font-size:14px;
+    }
 
-.project-box{
-padding:26px;
-}
+    .project-box{
+        padding:20px;
+        gap: 20px;
+    }
+
+    .project-content h2 {
+        font-size: 20px;
+    }
+
+    .project-content p {
+        font-size: 14px;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
 }

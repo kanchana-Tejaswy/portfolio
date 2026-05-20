@@ -53,7 +53,7 @@ border-bottom:1px solid #e5e7eb;
 .logo{
 font-size:20px;
 font-weight:600;
-color:#10a37f;
+color:#37b182;
 }
 
 /* BACK BUTTON */
@@ -62,7 +62,7 @@ color:#10a37f;
 position:absolute;
 right:24px;
 
-background:#10a37f;
+background:#37b182;
 color:#fff;
 
 border:none;
@@ -209,7 +209,7 @@ padding:12px 24px;
 margin-top:10px;
 margin-right:10px;
 
-background:#10a37f;
+background:#37b182;
 color:#fff;
 
 border-radius:8px;
@@ -262,51 +262,82 @@ font-size:14px;
 RESPONSIVE DESIGN
 ====================================================== */
 
-@media(max-width:900px){
+@media(max-width:1000px){
 
-.cert-box{
-flex-direction:column;
-text-align:center;
+    .hero h1{
+        font-size: 32px;
+    }
+
+    .cert-box{
+        flex-direction:column;
+        text-align:center;
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .cert-image{
+        max-width:100%;
+        margin: auto;
+    }
+
+    .cert-content{
+        width: 100%;
+    }
+
+    .cert-content .btn{
+        align-self:center;
+    }
 }
 
-.cert-content .btn{
-align-self:center;
+@media(max-width:768px){
+
+    section{
+        padding:60px 5%;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .cert-content h3{
+        font-size:22px;
+    }
 }
 
-}
+@media(max-width:480px){
 
-/* MOBILE */
+    .logo{
+        font-size:18px;
+    }
 
-@media(max-width:600px){
+    .back-btn{
+        padding:8px 16px;
+        font-size:14px;
+        position: static;
+        width: 100%;
+        margin-top: 10px;
+    }
 
-.hero h1{
-font-size:30px;
-}
+    .navbar {
+        flex-direction: column;
+    }
 
-section{
-padding:70px 18px;
-}
+    .cert-box{
+        padding:20px;
+        gap: 20px;
+    }
 
-/* NAVBAR FIX */
+    .cert-content h3 {
+        font-size: 20px;
+    }
 
-.navbar{
-flex-direction:column;
-gap:10px;
-}
+    .cert-content p {
+        font-size: 14px;
+    }
 
-.back-btn{
-position:static;
-width:100%;
-max-width:300px;
-}
-
-/* BUTTON MOBILE */
-
-.btn{
-width:100%;
-max-width:100%;
-white-space:normal;
-margin-right:0;
-}
-
+    .btn {
+        width: 100%;
+        justify-content: center;
+        margin-right: 0;
+    }
 }

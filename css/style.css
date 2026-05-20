@@ -411,7 +411,7 @@ h3.hello
 }
 h3.hello span
 {
-    font-family: 'Clicker Script ', cursive;
+    font-family: 'Clicker Script', cursive;
     font-size: 30px;
     font-weight: 700;
     color: var(--skin-colour)
@@ -1017,7 +1017,7 @@ h3.my-profession
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(236, 24, 57, 0.85); /* Semi-transparent theme color */
+    background: rgba(55, 177, 130, 0.85); /* Updated to Theme Green */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1460,11 +1460,16 @@ h3.my-profession
         max-width: 50%;
     }
 
+    .info-skills-container {
+        grid-template-columns: 1fr;
+    }
+
     /* Home Layout */
     .home
     {
         flex-direction: column;
         text-align: center;
+        padding-top: 40px;
     }
 
     .home .home-info
@@ -1475,8 +1480,19 @@ h3.my-profession
 
     .home .home-img
     {
-        display: block;
-        margin-top: 40px;
+        flex: 0 0 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+
+    .home .home-img img {
+        max-width: 320px;
+        width: 85%;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
 
     .section-title h2{
@@ -1490,16 +1506,22 @@ h3.my-profession
 {
     /* Full Width Layout */
     .contact .contact-form .col-6,
+    .contact .contact-form .col-12,
+    .contact .contact-info,
+    .contact .contact-form-container,
     .contact .contact-info-item,
     .portfolio .portfolio-items,
     .service .service-item,
     .about .about-content .experience,
     .about .about-content .education,
     .about .about-content .skills,
-    .about .about-content .personal-info
+    .about .about-content .personal-info,
+    .info-skills-container,
+    .timeline-container.row
     {
         flex: 0 0 100%;
         max-width: 100%;
+        grid-template-columns: 1fr;
     }
 
     /* Section Padding */
@@ -1515,6 +1537,16 @@ h3.my-profession
 
     h3.my-profession{
         font-size: 24px;
+    }
+
+    .home .home-img {
+        order: -1;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+    
+    .home .home-info {
+        order: 1;
     }
 }
 
@@ -1547,31 +1579,9 @@ h3.my-profession
     .contact-title{
         font-size: 20px;
     }
-}
 
-/* Tablets */
-@media (max-width:767px)
-{
-    .portfolio .portfolio-image img
-    {
-        max-height: 200px;
-    }
-}
-
-/* Mobile Phones */
-@media (max-width:480px)
-{
-    .portfolio .portfolio-image img
-    {
-        max-height: 180px;
-    }
-}
-
-
-@media (max-width:480px)
-{
     .home .home-img img{
-        max-width:200px;
+        max-width:280px;
     }
 
     h3.hello{
@@ -1581,49 +1591,9 @@ h3.my-profession
     h3.my-profession{
         font-size:22px;
     }
-}
 
-@media (max-width:991px){
-
-    .home{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .home .home-info{
-        flex:0 0 100%;
-        max-width:100%;
-    }
-
-    .home .home-img{
-        flex:0 0 100%;
-        max-width:100%;
-        margin-top:30px;
-    }
-
-    .home .home-img img{
-        max-width:250px;
-        margin:auto;
-    }
-}
-
-@media (max-width:991px){
-
-    .section{
-        left:0;
-        width:100%;
-    }
-
-}
-
-/* ===== Custom Mobile Layout for Home ===== */
-@media (max-width: 767px) {
-    .home .home-img {
-        order: -1;
-        margin-top: 0;
-        margin-bottom: 30px;
-    }
-    .home .home-info {
-        order: 1;
+    .portfolio .portfolio-image img
+    {
+        max-height: 250px;
     }
 }

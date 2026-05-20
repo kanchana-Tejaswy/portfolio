@@ -5,7 +5,7 @@
     --card:#ffffff;
     --text:#111827;
     --muted:#6b7280;
-    --accent:#10a37f;   /* ChatGPT green */
+    --accent:#37b182;   /* ChatGPT green */
     --border:#e5e7eb;
     --shadow:rgba(0,0,0,0.08);
 }
@@ -161,14 +161,29 @@ footer{
 
 /* ================= RESPONSIVE ================= */
 
-@media(max-width:768px){
+@media(max-width:1000px){
 
-    .hero{
-        padding:2rem 1rem;
+    .hero h1{
+        font-size: 32px;
     }
 
+    .section-title{
+        font-size: 1.5rem;
+    }
+
+    .activities{
+        gap: 1.2rem;
+    }
+}
+
+@media(max-width:768px){
+
     .section{
-        padding:1.5rem 1rem;
+        padding:60px 5%;
+    }
+
+    .hero h1{
+        font-size:28px;
     }
 
     .back-btn{
@@ -179,11 +194,23 @@ footer{
 
 @media(max-width:480px){
 
+    .logo{
+        font-size:18px;
+    }
+
     .hero h1{
-        font-size:1.7rem;
+        font-size:24px;
     }
 
     .section-title{
         font-size:1.3rem;
+    }
+
+    .activity-content h2 {
+        font-size: 1rem;
+    }
+
+    .activity-content p {
+        font-size: 14px;
     }
 }
