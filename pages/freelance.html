@@ -1,128 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Freelance Hub | Tejaswy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link rel="stylesheet" href="../css/freelance.css">
 </head>
+
 <body>
 
-<!-- ================= SIDEBAR NAV ================= -->
-<div class="sidebar" id="sidebar">
-    <div class="sidebar-toggler" id="sidebar-toggler">
-        <i class="fa fa-bars"></i>
+    <!-- ================= SIDEBAR NAV ================= -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-toggler" id="sidebar-toggler">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class="sidebar-content">
+            <h2 class="sidebar-title">Categories</h2>
+            <ul class="sidebar-menu">
+                <li><a href="#web-dev"><i class="fa fa-laptop-code"></i> Web Development</a></li>
+                <li><a href="#youtube-thumbnails"><i class="fa fa-palette"></i> YouTube Thumbnails</a></li>
+                <li><a href="#ai-automation"><i class="fa fa-robot"></i> AI Automation</a></li>
+                <li><a href="#video-editing"><i class="fa fa-video"></i> Video Editing</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="sidebar-content">
-        <h2 class="sidebar-title">Categories</h2>
-        <ul class="sidebar-menu">
-            <li><a href="#web-dev"><i class="fa fa-laptop-code"></i> Web Development</a></li>
-            <li><a href="#youtube-thumbnails"><i class="fa fa-palette"></i> YouTube Thumbnails</a></li>
-            <li><a href="#ai-automation"><i class="fa fa-robot"></i> AI Automation</a></li>
-            <li><a href="#video-editing"><i class="fa fa-video"></i> Video Editing</a></li>
-        </ul>
-    </div>
-</div>
 
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar">
-    <div class="nav-container">
-        <h2 class="logo">Freelance Services</h2>
-        <button class="back-btn" onclick="window.location.href='../index.html'">
-            <i class="fa fa-arrow-left"></i> Back to Portfolio
-        </button>
-    </div>
-</nav>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2 class="logo">Freelance Services</h2>
+            <button class="back-btn" onclick="window.location.href='../index.html'">
+                <i class="fa fa-arrow-left"></i> Back to Portfolio
+            </button>
+        </div>
+    </nav>
 
-<div class="main-content-wrapper">
+    <div class="main-content-wrapper">
 
-    <!-- ================= WEB DEVELOPMENT SERVICE ================= -->
-    <section class="section" id="web-dev">
-        <h1 class="section-title">Web Development Service</h1>
-        <div class="project-box">
-            <div class="project-media">
-                <div class="placeholder-video" style="width:100%; height:250px; background:#e2e8f4; border-radius:18px; display:flex; align-items:center; justify-content:center; color:#64748b; border: 2px dashed #37b182;">
-                    <i class="fa fa-code" style="font-size:40px;"></i>
+        <!-- ================= WEB DEVELOPMENT SERVICE ================= -->
+        <section class="section" id="web-dev">
+            <h1 class="section-title">Web Development Service</h1>
+            <div class="project-box">
+                <div class="project-media">
+                    <video controls class="project-video">
+                        <source src="../videos/freee lancing/choclate web site.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="project-content">
+                    <h2>Falson Chocolate</h2>
+                    <p><strong>The Service:</strong>
+                        Designed and developed a modern,
+                        responsive website for a chocolate brand to showcase its products and strengthen its online
+                        presence.</p>
+                    <p><strong>Offerings:</strong>
+                        Product Showcase, Responsive Design, Interactive User Interface, Smooth Navigation, and
+                        Mobile-Friendly Experience.</p>
+                    <p><strong>Stack:</strong> HTML5, CSS3, JavaScript, Visual Studio Code.</p>
+                    <a href="/portfolio/videos/freee lancing/choclate web site.mp4" class="btn"><i
+                            class="fa fa-eye"></i> View Project</a>
                 </div>
             </div>
-            <div class="project-content">
-                <h2>Custom Web Solutions</h2>
-                <p><strong>The Service:</strong> Building responsive, high-performance websites tailored to professional and business needs.</p>
-                <p><strong>Offerings:</strong> Modern Portfolios, Landing Pages, and Web Interfaces with clean code and SEO optimization.</p>
-                <p><strong>Stack:</strong> HTML5, CSS3, JavaScript, Responsive Frameworks.</p>
-                <a href="project.html#web-dev" class="btn"><i class="fa fa-eye"></i> View Web Builds</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- ================= YOUTUBE THUMBNAIL SERVICE ================= -->
-    <section class="section gray-section" id="youtube-thumbnails">
-        <h1 class="section-title">YouTube Thumbnail Service</h1>
-        <div class="project-box">
-            <div class="project-media">
-                <img src="../images/dp-yt1.jpeg" alt="Thumbnail Design">
-            </div>
-            <div class="project-content">
-                <h2>High-CTR Visual Designs</h2>
-                <p><strong>The Service:</strong> Designing eye-catching thumbnails that leverage visual psychology to maximize click-through rates.</p>
-                <p><strong>Experience:</strong> Specialized in technical and educational content for developers and tech creators.</p>
-                <p><strong>Focus:</strong> Bold typography, contrast-rich palettes, and strategic branding.</p>
-                <a href="youtube-design.html" class="btn"><i class="fa fa-palette"></i> Design Portfolio</a>
-            </div>
-        </div>
-    </section>
+            <!---WEB DEV 2 -->
 
-    <!-- ================= AI AUTOMATION SERVICE ================= -->
-    <section class="section" id="ai-automation">
-        <h1 class="section-title">AI Automation Service</h1>
-        <div class="project-box">
-            <div class="project-media">
-                <div class="placeholder-video" style="width:100%; height:250px; background:#e2e8f4; border-radius:18px; display:flex; align-items:center; justify-content:center; color:#64748b; border: 2px dashed #37b182;">
-                    <i class="fa fa-brain" style="font-size:40px;"></i>
+            <div class="project-box">
+                <div class="project-media">
+                    <video controls class="project-video">
+                        <source src="../videos/freee lancing/lumina hospatal video.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="project-content">
+                    <h2>Limina Dental Clinic</h2>
+
+                    <p><strong>The Service:</strong>
+                        Designed and developed a modern, elegant, and responsive website for a dental clinic with a
+                        clean, calming, and patient-friendly user experience.</p>
+
+                    <p><strong>Offerings:</strong>
+                        Appointment System Design, Responsive Layout, Smooth Navigation, Modern UI/UX, and Professional
+                        Clinic Presentation.</p>
+
+                    <p><strong>Stack:</strong>
+                        React, Node.js, TypeScript, JavaScript.</p>
+
+                    <a href="/portfolio/videos/freee lancing/lumina hospatal video.mp4" class="btn">
+                        <i class="fa fa-eye"></i> View Project
+                    </a>
                 </div>
             </div>
-            <div class="project-content">
-                <h2>Intelligent RPA & AI Workflows</h2>
-                <p><strong>The Service:</strong> Designing and deploying end-to-end automation solutions using UiPath and n8n.</p>
-                <p><strong>Specialty:</strong> Integrating Generative AI agents into traditional RPA workflows for autonomous decision-making.</p>
-                <p><strong>Tools:</strong> UiPath, n8n, OpenAI API, Webhooks, Python.</p>
-                <a href="project.html#uipath" class="btn"><i class="fa fa-robot"></i> Explore Automation Work</a>
+
+
+            <!----WEB DEV 3 -->
+
+
+            <div class="project-box">
+
+                <div class="project-media">
+                    <video controls class="project-video">
+                        <source src="../videos/freee lancing/falcon 7 shoue company.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="project-content">
+                    <h2>Falcon 7 Shoe Company</h2>
+
+                    <p><strong>The Service:</strong>
+                        Designed and developed an interactive and immersive website for a footwear brand with a focus on
+                        modern UI/UX and product visualization.</p>
+
+                    <p><strong>Offerings:</strong>
+                        3D Shoe Product Display, Interactive UI, Smooth Animations, Responsive Design, and Premium
+                        Shopping Experience.</p>
+
+                    <p><strong>Stack:</strong>
+                        React, Node.js, TypeScript, JavaScript.</p>
+
+                    <a href="/portfolio/videos/freee lancing/falcon 7 shoue company.mp4" class="btn">
+                        <i class="fa fa-eye"></i> View Project
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
 
-    <!-- ================= VIDEO EDITING SERVICE ================= -->
-    <section class="section gray-section" id="video-editing">
-        <h1 class="section-title">Video Editing Service</h1>
-        <div class="project-box">
-            <div class="project-media">
-                <img src="../images/certificates/f7 logo .jpg" alt="Falcon 7 YouTube">
+
+
+
+        </section>
+
+        <!-- ================= YOUTUBE THUMBNAIL SERVICE ================= -->
+        <section class="section gray-section" id="youtube-thumbnails">
+            <h1 class="section-title">YouTube Thumbnail &amp; Banner Gallery</h1>
+            <div class="yt-gallery">
+                <img src="../images/youtube/banners/dp_yt_bn1.jpeg" alt="Banner 1">
+                <img src="../images/dp-yt1.jpeg" alt="Thumbnail 1">
+                <img src="../images/dp-yt-2.jpeg" alt="Thumbnail 2">
+                <img src="../images/dm_yttm3.jpeg" alt="Thumbnail 3">
+                <img src="../images/dm_yttm4.jpeg" alt="Thumbnail 4">
+                <img src="../images/5.jpeg" alt="Thumbnail 5">
             </div>
-            <div class="project-content">
-                <h2>Professional Video Production</h2>
-                <p><strong>The Service:</strong> Technical content creation and professional video editing for YouTube and digital platforms.</p>
-                <p><strong>Highlights:</strong> Founder of 'Falcon 7' YouTube channel. Specialized in high-retention technical tutorials.</p>
-                <p><strong>Features:</strong> B-roll management, motion graphics, audio mastering, and storytelling.</p>
-                <a href="https://youtube.com/@falcon369-f7" target="_blank" class="btn"><i class="fab fa-youtube"></i> Visit Channel</a>
+            <div class="view-more"><a href="youtube-design.html" class="btn"><i class="fa fa-palette"></i> View More</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-</div>
+        <!-- ================= AI AUTOMATION SERVICE ================= -->
+        <section class="section" id="ai-automation">
+            <h1 class="section-title">AI Automation Service</h1>
+            <div class="project-box">
+                <div class="project-media">
+                    <video controls class="project-video">
+                        <source src="#" type="video/mp4">
+                    </video>
+                </div>
+                <div class="project-content">
+                    <h2>Intelligent RPA & AI Workflows</h2>
+                    <p><strong>The Service:</strong> Designing and deploying end-to-end automation solutions using
+                        UiPath and n8n.</p>
+                    <p><strong>Specialty:</strong> Integrating Generative AI agents into traditional RPA workflows for
+                        autonomous decision-making.</p>
+                    <p><strong>Tools:</strong> UiPath, n8n, OpenAI API, Webhooks, Python.</p>
+                    <a href="project.html#uipath" class="btn"><i class="fa fa-robot"></i> Explore Automation Work</a>
+                </div>
+            </div>
 
-<!-- ================= FOOTER ================= -->
-<footer>
-    <p>© 2026 Tejaswy | Built with Discipline</p>
-</footer>
 
-<script src="../js/freelance.js"></script>
+            <div class="project-box">
+                <div class="project-media">
+                    <video controls class="project-video">
+                        <source src="#" type="video/mp4">
+                    </video>
+                </div>
+                <div class="project-content">
+                    <div class="project-content">
+                        <h2>AI Hotel Booking Voice Agent</h2>
+
+                        <p>
+                            <strong>The Problem:</strong>
+                            Hotel customers often experience delays while checking room availability,
+                            asking questions, and completing reservations through traditional phone
+                            calls or manual booking systems.
+                        </p>
+
+                        <p>
+                            <strong>The Solution:</strong>
+                            Built an AI-powered hotel booking voice agent that communicates naturally
+                            with customers, answers hotel-related questions, collects booking details,
+                            checks customer requirements, and assists with room reservations through
+                            a real-time voice conversation.
+                        </p>
+
+                        <p>
+                            <strong>Tech:</strong>
+                            Vapi AI, ChatGPT API, JavaScript, Node.js, Webhooks.
+                        </p>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= VIDEO EDITING SERVICE ================= -->
+        <section class="section gray-section" id="video-editing">
+            <h1 class="section-title">Video Editing Service</h1>
+            <div class="project-box">
+                <div class="project-media">
+                    <img src="../images/certificates/f7 logo .jpg" alt="Falcon 7 YouTube">
+                </div>
+                <div class="project-content">
+                    <h2>Professional Video Production</h2>
+                    <p><strong>The Service:</strong> Technical content creation and professional video editing for
+                        YouTube and digital platforms.</p>
+                    <p><strong>Highlights:</strong> Founder of 'Falcon 7' YouTube channel. Specialized in high-retention
+                        technical tutorials.</p>
+                    <p><strong>Features:</strong> B-roll management, motion graphics, audio mastering, and storytelling.
+                    </p>
+                    <a href="https://youtube.com/@falcon369-f7" target="_blank" class="btn"><i
+                            class="fab fa-youtube"></i> Visit Channel</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p> Tejaswy </p>
+    </footer>
+
+    <script src="../js/freelance.js"></script>
 
 </body>
+
 </html>

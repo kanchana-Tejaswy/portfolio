@@ -1,186 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>My Projects | Tejaswy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link rel="stylesheet" href="../css/project.css">
 </head>
+
 <body>
 
-<!-- ================= SIDEBAR NAV ================= -->
-<div class="sidebar" id="sidebar">
-    <div class="sidebar-toggler" id="sidebar-toggler">
-        <i class="fa fa-bars"></i>
+    <!-- ================= SIDEBAR NAV ================= -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-toggler" id="sidebar-toggler">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class="sidebar-content">
+            <h2 class="sidebar-title">Categories</h2>
+            <ul class="sidebar-menu">
+                <li><a href="#problem-solving"><i class="fa fa-lightbulb"></i> Problem Solving</a></li>
+                <li><a href="#web-dev"><i class="fa fa-code"></i> Web Development</a></li>
+                <li><a href="#uipath"><i class="fa fa-robot"></i> UiPath Projects</a></li>
+                <li><a href="#ml"><i class="fa fa-brain"></i> AI / ML Projects</a></li>
+                <!----    <li><a href="#ai-integrated"><i class="fa fa-microchip"></i> AI Integrated</a></li>
+            <li><a href="#devops"><i class="fa fa-server"></i> --</a></li>  ---->
+                <li><a href="#workflow"><i class="fa fa-project-diagram"></i> n8n Workflows</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="sidebar-content">
-        <h2 class="sidebar-title">Categories</h2>
-        <ul class="sidebar-menu">
-            <li><a href="#problem-solving"><i class="fa fa-lightbulb"></i> Problem Solving</a></li>
-            <li><a href="#web-dev"><i class="fa fa-code"></i> Web Development</a></li>
-            <li><a href="#uipath"><i class="fa fa-robot"></i> UiPath Projects</a></li>
-            <li><a href="#ml"><i class="fa fa-brain"></i> AI / ML Projects</a></li>
-            <li><a href="#ai-integrated"><i class="fa fa-microchip"></i> AI Integrated</a></li>
-            <li><a href="#devops"><i class="fa fa-server"></i> DevOps Projects</a></li>
-            <li><a href="#workflow"><i class="fa fa-project-diagram"></i> n8n Workflows</a></li>
-        </ul>
-    </div>
-</div>
 
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar">
-    <div class="nav-container">
-        <h2 class="logo">My Projects</h2>
-        <button class="back-btn" onclick="window.location.href='../index.html'">
-            <i class="fa fa-arrow-left"></i> Back to Portfolio
-        </button>
-    </div>
-</nav>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2 class="logo">My Projects</h2>
+            <button class="back-btn" onclick="window.location.href='../index.html'">
+                <i class="fa fa-arrow-left"></i> Back to Portfolio
+            </button>
+        </div>
+    </nav>
 
-<div class="main-content-wrapper">
+    <div class="main-content-wrapper">
 
-    <!-- ================= REAL-TIME PROBLEM SOLVING ================= -->
-    <section class="section" id="problem-solving">
-        <h1 class="section-title">Real-time Problem Solving</h1>
+        <!-- ================= REAL-TIME PROBLEM SOLVING ================= -->
+        <section class="section" id="problem-solving">
+            <h1 class="section-title">Real-time Problem Solving</h1>
 
-        <!----project 1  -->
-        <div class="project-box">
-            <div class="project-video">
-                <div class="placeholder-video" style="width:100%; height:250px; background:#e2e8f0; border-radius:18px; display:flex; align-items:center; justify-content:center; color:#64748b;">
-                    <i class="fa fa-tools" style="font-size:40px;"></i>
+            <!----project 1  -->
+
+            <!--------------project  2  -------------->
+            <div class="project-box">
+                <div class="project-video">
+                    <video controls>
+                        <source src="/portfolio/videos/web-dev/monk os.mp4" type="video/mp4">
+                    </video>
                 </div>
-            </div>
-            <div class="project-content">
-                <h2>Grocery Hero</h2>
-                <p><strong>The Problem:</strong> Manual troubleshooting of complex system errors takes hours, delaying critical operations.</p>
-                <p><strong>The Solution:</strong> Built a diagnostic script that identifies and patches common system bottlenecks automatically.</p>
-                <p><strong>Tech:</strong> HTML , CSS ,JavaScript</p>
-                <a href="#" class="btn"><i class="fab fa-github"></i> View Details</a>
-            </div>
-        </div>
 
-
-        
-    </section>
-
-    <!-- ================= WEB DEVELOPMENT PROJECTS ================= -->
-    <section class="section gray-section" id="web-dev">
-        <h1 class="section-title">Web Development</h1>
-
-        <!-- Project 1 -->
-        <div class="project-box">
-            <div class="project-video">
-                <video controls>
-                    <source src="../videos/web-dev/portfolio_video.mp4" type="video/mp4">
-                </video>
-            </div>
-
-            <div class="project-content">
-                <h2>Interactive Portfolio Website</h2>
-                <p><strong>The Solution:</strong> Developed a fully responsive Personal Portfolio Website to showcase technical expertise and professional certifications.</p>
-                <p><strong>Key Features:</strong> Interactive project cards, video demonstrations, and mobile-first responsiveness.</p>
-                <p><strong>Tech:</strong> HTML5, CSS3, JavaScript</p>
-                <a href="https://github.com/kanchana-Tejaswy" class="btn" target="_blank"><i class="fab fa-github"></i> View GitHub</a>
-            </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-box">
-            <div class="project-video">
-                <video controls>
-                    <source src="../videos/web-dev/password generator.mp4" type="video/mp4">
-                </video>
-            </div>
-
-            <div class="project-content">
-                <h2>Secure Password Architect</h2>
-                <p><strong>The Solution:</strong> An algorithm-based generator that creates high-entropy, customizable passwords with specific complexity requirements.</p>
-                <p><strong>Key Features:</strong> Dynamic length control, character type filtering, and one-click clipboard integration.</p>
-                <p><strong>Tech:</strong> HTML5, CSS3, JavaScript</p>
-                <a href="https://github.com/kanchana-Tejaswy/Password-Generator-.git" class="btn" target="_blank"><i class="fab fa-github"></i> View GitHub</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= UIPATH PROJECTS ================= -->
-    <section class="section" id="uipath">
-        <h1 class="section-title">UiPath Projects</h1>
-
-        <div class="project-box">
-            <div class="project-video">
-                <video controls>
-                    <source src="../videos/rpa/uipath vocabulary work flow video full.mp4" type="video/mp4">
-                </video>
-            </div>
-
-            <div class="project-content">
-                <h2>Daily Hindu Vocabulary Bot</h2>
-                <p><strong>The Solution:</strong> Built an AI-integrated RPA workflow that uses LLMs (ChatGPT) to curate daily vocabulary and deliver it via automated email.</p>
-                <p><strong>Tech:</strong> UiPath, ChatGPT API, Orchestrator</p>
-                <a href="https://github.com/kanchana-Tejaswy/Ui-Path-Vocabulary-bot.git" class="btn" target="_blank"><i class="fab fa-github"></i> View GitHub</a>
-            </div>
-        </div>
-
-        <div class="project-box">
-            <div class="project-video">
-                <video controls>
-                    <source src="../videos/rpa/vbwf_usv1.mp4" type="video/mp4">
-                </video>
-            </div>
-
-            <div class="project-content">
-                <h2>Airline Compensation Automator</h2>
-                <p><strong>The Solution:</strong> Developed a bot to handle the end-to-end process of airline compensation claims, from data extraction to form submission.</p>
-                <p><strong>Tech:</strong> UiPath, Excel Automation, Web Scraping</p>
-                <a href="#" class="btn"><i class="fab fa-github"></i> View GitHub</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= AI/ML PROJECTS ================= -->
-    <section class="section gray-section" id="ml">
-        <h1 class="section-title">AI / ML Projects</h1>
-
-        <div class="project-box">
-            <div class="project-video">
-                <div class="placeholder-video">
-                    <i class="fa fa-brain" style="font-size:40px;"></i>
+                <div class="project-content">
+                    <h2>Monk Mode</h2>
+                    <p><strong>The Problem:</strong> Many people struggle to stay disciplined, maintain consistency, and
+                        track their daily habits, making it difficult to achieve long-term personal and professional
+                        goals.</p>
+                    <p><strong>The Solution:</strong> Built a productivity and discipline-tracking web application that
+                        helps users gamify their self-improvement journey through habit tracking, progress monitoring,
+                        streaks, and motivational insights to encourage long-term consistency.</p>
+                    <p><strong>Tech:</strong> React, TypeScript, Node.js, Supabase, JavaScript.</p>
+                    <a href="#" class="btn"><i class="fab fa-github"></i> View Details</a>
+                    <a href="https://www.codechef.com/users/tejaswy" class="btn" target="_blank"><i
+                            class="fa-solid fa-code"></i> Test CodeChef Profile</a>
                 </div>
             </div>
 
-            <div class="project-content">
-                <h2>Predictive Cancer Analysis</h2>
-                <p>Leveraged machine learning algorithms to perform predictive analytics on medical datasets, focusing on early detection markers.</p>
-                <p><strong>Tech:</strong> Python, Pandas, Scikit-learn</p>
-                <a href="#" class="btn"><i class="fab fa-github"></i> View Repo</a>
-            </div>
-        </div>
 
-        <div class="project-box">
-            <div class="project-video">
-                <div class="placeholder-video">
-                    <i class="fa fa-chart-line" style="font-size:40px;"></i>
+
+
+        </section>
+
+        <!-- ================= WEB DEVELOPMENT PROJECTS ================= -->
+        <section class="section gray-section" id="web-dev">
+            <h1 class="section-title">Web Development</h1>
+
+            <!-- Project 1 -->
+            <div class="project-box">
+                <div class="project-video">
+                    <video controls>
+                        <source src="../videos/web-dev/portfolio_video.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="project-content">
+                    <h2>Interactive Portfolio Website</h2>
+                    <p><strong>The Solution:</strong> Developed a fully responsive Personal Portfolio Website to
+                        showcase technical expertise and professional certifications.</p>
+                    <p><strong>Key Features:</strong> Interactive project cards, video demonstrations, and mobile-first
+                        responsiveness.</p>
+                    <p><strong>Tech:</strong> HTML5, CSS3, JavaScript</p>
+                    <a href="https://github.com/kanchana-Tejaswy" class="btn" target="_blank"><i
+                            class="fab fa-github"></i> View GitHub</a>
                 </div>
             </div>
 
-            <div class="project-content">
-                <h2>Intelligent Stock Forecaster</h2>
-                <p>Implemented deep learning architectures to analyze market trends and predict potential stock fluctuations.</p>
-                <p><strong>Tech:</strong> TensorFlow, Python, NumPy</p>
-                <a href="#" class="btn"><i class="fab fa-github"></i> View Repo</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- ================= AI INTEGRATED PROJECTS ================= -->
-    <section class="section" id="ai-integrated">
+            <!----project 2 -->
+
+            <div class="project-box">
+                <div class="project-video">
+                    <video controls>
+                        <source src="../videos/realtime/grocery.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="project-content">
+                    <h2>Grocery Hero</h2>
+                    <p><strong>The Problem:</strong> Manual troubleshooting of complex system errors takes hours,
+                        delaying critical operations.</p>
+                    <p><strong>The Solution:</strong> Built a diagnostic script that identifies and patches common
+                        system bottlenecks automatically.</p>
+                    <p><strong>Tech:</strong> HTML , CSS ,JavaScript</p>
+                    <a href="#" class="btn"><i class="fab fa-github"></i> View Details</a>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-box">
+                <div class="project-video">
+                    <video controls>
+                        <source src="../videos/web-dev/password generator.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="project-content">
+                    <h2>Secure Password Architect</h2>
+                    <p><strong>The Solution:</strong> An algorithm-based generator that creates high-entropy,
+                        customizable passwords with specific complexity requirements.</p>
+                    <p><strong>Key Features:</strong> Dynamic length control, character type filtering, and one-click
+                        clipboard integration.</p>
+                    <p><strong>Tech:</strong> HTML5, CSS3, JavaScript</p>
+                    <a href="https://github.com/kanchana-Tejaswy/Password-Generator-.git" class="btn" target="_blank"><i
+                            class="fab fa-github"></i> View GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= UIPATH PROJECTS ================= -->
+        <section class="section" id="uipath">
+            <h1 class="section-title">UiPath Projects</h1>
+
+            <div class="project-box">
+                <div class="project-video">
+                    <video controls>
+                        <source src="../videos/rpa/uipath vocabulary work flow video full.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="project-content">
+                    <h2>Daily Hindu Vocabulary Bot</h2>
+                    <p><strong>The Solution:</strong> Built an AI-integrated RPA workflow that uses LLMs (ChatGPT) to
+                        curate daily vocabulary and deliver it via automated email.</p>
+                    <p><strong>Tech:</strong> UiPath, ChatGPT API, Orchestrator</p>
+                    <a href="https://github.com/kanchana-Tejaswy/Ui-Path-Vocabulary-bot.git" class="btn"
+                        target="_blank"><i class="fab fa-github"></i> View GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <div class="project-video">
+                    <video controls>
+                        <source src="../videos/rpa/vbwf_usv1.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="project-content">
+                    <h2>Airline Compensation Automator</h2>
+                    <p><strong>The Solution:</strong> Developed a bot to handle the end-to-end process of airline
+                        compensation claims, from data extraction to form submission.</p>
+                    <p><strong>Tech:</strong> UiPath, Excel Automation, Web Scraping</p>
+                    <a href="#" class="btn"><i class="fab fa-github"></i> View GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= AI/ML PROJECTS ================= -->
+        <section class="section gray-section" id="ml">
+            <h1 class="section-title">AI / ML Projects</h1>
+
+            <div class="project-box">
+                <div class="project-video">
+                    <video controls>
+                        <source src="../videos/ml/stock market prediction.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="project-content">
+                    <h2>Stock Market Prediction</h2>
+                    <p>Leveraged machine learning algorithms to perform predictive analytics on stock market datasets,
+                        focusing on early detection markers.</p>
+                    <p><strong>Tech:</strong> Python, Pandas, Scikit-learn</p>
+                    <a href="https://github.com/kanchana-Tejaswy/stock_market_predection" class="btn" target="_blank"><i
+                            class="fab fa-github"></i> View Repo</a>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- ================= AI INTEGRATED PROJECTS ================= -->
+        <!--- <section class="section" id="ai-integrated">
         <h1 class="section-title">AI Integrated Projects</h1>
 
         <div class="project-box">
@@ -197,11 +228,11 @@
                 <a href="#" class="btn"><i class="fa fa-rocket"></i> Coming Soon</a>
             </div>
         </div>
-    </section>
+    </section>  -->
 
-    <!-- ================= DEVOPS PROJECTS ================= -->
-    <section class="section gray-section" id="devops">
-        <h1 class="section-title">DevOps Projects</h1>
+        <!-- ================= DEVOPS PROJECTS ================= -->
+        <!-----<section class="section gray-section" id="devops">
+        <h1 class="section-title">--</h1>
         <div class="project-box">
             <div class="project-video">
                 <div class="placeholder-video" style="width:100%; height:250px; background:#e2e8f0; border-radius:18px; display:flex; align-items:center; justify-content:center; color:#64748b;">
@@ -209,41 +240,78 @@
                 </div>
             </div>
             <div class="project-content">
-                <h2>CI/CD Pipeline Automation</h2>
-                <p>Implemented a robust CI/CD pipeline using GitHub Actions and Docker for seamless containerized deployments.</p>
+                <h2>....</h2>
+              <p>Implemented a robust CI/CD pipeline using GitHub Actions and Docker for seamless containerized deployments.</p>
                 <p><strong>Tech:</strong> Docker, GitHub Actions, AWS</p>
-                <a href="#" class="btn"><i class="fab fa-aws"></i> Infrastructure Link</a>
+                <a href="#" class="btn"><i class="fab fa-aws"></i> Infrastructure Link</a> 
             </div>
         </div>
-    </section>
+    </section> --->
 
-    <!-- ================= WORKFLOW PROJECTS ================= -->
-    <section class="section" id="workflow">
-        <h1 class="section-title">n8n Workflows</h1>
+        <!-- ================= WORKFLOW PROJECTS ================= -->
+        <section class="section" id="workflow">
+            <h1 class="section-title">n8n Workflows</h1>
 
-        <div class="project-box">
-            <div class="project-video">
-                <div class="placeholder-video" style="width:100%; height:250px; background:#e2e8f0; border-radius:18px; display:flex; align-items:center; justify-content:center; color:#64748b;">
-                    <i class="fa fa-project-diagram" style="font-size:40px;"></i>
+            <div class="project-box">
+                <div class="project-video">
+                    <video controls>
+                        <source src="../videos/n8n/n8n bot.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="project-content">
+                    <h2>Chat bot</h2>
+                    <p>chat bot made using n8n work flow with ai agents module </p>
+                    <p><strong>Tech:</strong> n8n, OpenAI API, Webhooks</p>
+                    <a href="https://github.com/kanchana-Tejaswy" class="btn" target="_blank"><i
+                            class="fa fa-share-nodes"></i> View Workflows</a>
                 </div>
             </div>
 
-            <div class="project-content">
-                <h2>Automated Content Distribution</h2>
-                <p>Designed a multi-node n8n workflow that triggers on new blog posts, uses AI to generate social snippets, and auto-posts to multiple platforms.</p>
-                <p><strong>Tech:</strong> n8n, OpenAI API, Webhooks</p>
-                <a href="https://github.com/kanchana-Tejaswy" class="btn" target="_blank"><i class="fa fa-share-nodes"></i> View Workflows</a>
+            <div class="project-box">
+                <div class="project-video">
+                    <video controls>
+                        <source src="../videos/n8n/n8n bot.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="project-content">
+                    <h2>AI Hotel Booking Voice Agent</h2>
+
+                    <p>
+                        <strong>The Problem:</strong>
+                        Hotel customers often experience delays while checking room availability,
+                        asking questions, and completing reservations through traditional phone
+                        calls or manual booking systems.
+                    </p>
+
+                    <p>
+                        <strong>The Solution:</strong>
+                        Built an AI-powered hotel booking voice agent that communicates naturally
+                        with customers, answers hotel-related questions, collects booking details,
+                        checks customer requirements, and assists with room reservations through
+                        a real-time voice conversation.
+                    </p>
+
+                    <p>
+                        <strong>Tech:</strong>
+                        Vapi AI, ChatGPT API, JavaScript, Node.js, Webhooks.
+                    </p>
+
+                    <a href="https://github.com/kanchana-Tejaswy" class="btn" target="_blank"><i
+                            class="fa fa-share-nodes"></i> View Workflows</a>
+                </div>
             </div>
-        </div>
-    </section>
-</div>
+        </section>
+    </div>
 
-<!-- ================= FOOTER ================= -->
-<footer>
-    <p>© 2026 Tejaswy | Built with Discipline</p>
-</footer>
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p> Tejaswy </p>
+    </footer>
 
-<script src="../js/project.js"></script>
+    <script src="../js/project.js"></script>
 
 </body>
+
 </html>

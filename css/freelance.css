@@ -228,13 +228,51 @@ transition:.35s ease;
 box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 }
 
+/* Video styling for project media */
+.project-media video{
+width:100%;
+max-width:460px;
+border-radius:12px;
+transition:.35s ease;
+object-fit:cover;
+aspect-ratio: 16/9;
+}
+
+
 .project-box:hover img{
 transform:scale(1.04);
 }
 
 /* =====================================================
+   YOUTUBE GALLERY SECTION
+   ===================================================== */
+.yt-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+.yt-gallery img {
+    width: 100%;
+    max-width: 460px;
+    border-radius: 12px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    transition: .35s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.yt-gallery img:hover {
+    transform: scale(1.04);
+}
+.yt-gallery .view-more {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+/* =====================================================
    CONTENT
-===================================================== */
+   ===================================================== */
 
 .project-content{
 flex:1.2;
@@ -346,10 +384,10 @@ font-size:14px;
         gap: 30px;
         padding: 30px;
     }
-    .project-media img, .placeholder-video{
-        max-width:100%;
-        margin: auto;
-    }
+    .project-media img, .project-media video, .placeholder-video{
+    max-width:100%;
+    margin:auto;
+}
     .project-content{
         width: 100%;
     }
